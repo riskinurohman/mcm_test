@@ -52,3 +52,34 @@ Contoh data json yang harus dibawa ketika akan update:
 - Delete Matkul(localhost:3000/matkul/delete_matkul/:id)(DELETE)  
 Keterangan:  
 :id adalah id matkul yang akan dihapus. Copy paste saja dari table matkul  
+
+#### Endpoint Rencana Studi
+- Create Rencana Studi(localhost:3000/rencana_studi/create_rs)(POST)  
+Contoh data json yang harus dibawa ketika akan create:  
+`{
+  "id_mahasiswa": "6da664ec-aabb-49d8-a241-0a8fd378a42c",
+  "details": [
+    "1f0b027b-41da-4847-b646-8c12e7884e90",
+    "e5d112bb-d472-4879-98b2-18d66a9d8471",
+    "862088ca-3e07-45db-b3a3-e995eb828277"
+  ]
+}`  
+Keterangan:  
+`id_mahasiswa` id dari mahasiswa yang akan mengambil rencana studi  
+`details(array)` id matakuliah yang akan diambil. Copy paste dari table matakuliah
+- Read Rencana Studi(localhost:3000/rencana_studi?page=1&limit=10)(GET)
+- Update Rencana Studi(localhost:3000/rencana_studi/update_rs/:id)(method PUT)  
+Keterangan:  
+:id adalah id rencana studi yang akan diupdate. Copy paste saja dari table rencana studi(tr_rencana_studi)  
+Contoh data json yang harus dibawa ketika akan update:  
+`{
+  "details": [
+    "1f0b027b-41da-4847-b646-8c12e7884e90",
+    "e5d112bb-d472-4879-98b2-18d66a9d8471",
+    "862088ca-3e07-45db-b3a3-e995eb828277"
+  ]
+}` 
+    
+- Delete Rencana Studi(localhost:3000/rencana_studi/delete_rs/:id)(DELETE)  
+Keterangan:  
+:id adalah id rencana studi yang akan diupdate. Copy paste saja dari table rencana studi(tr_rencana_studi)    
